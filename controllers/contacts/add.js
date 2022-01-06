@@ -1,11 +1,7 @@
 const { BadRequest } = require("http-errors");
-const { addContact } = require("../../model");
+const { Contact } = require("../../model");
 
-const add = async (reg, res) => {
-  const contacts = await addContact(reg.body);
-  if (!contacts) {
-    throw new BadRequest(`Missing required field`);
-  }
+const add = async (req, res) => {
   res.status(201).json({
     status: "Success",
     code: 201,
