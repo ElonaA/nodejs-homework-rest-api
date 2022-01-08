@@ -12,9 +12,6 @@ const removeById = async (req, res) => {
     status: "Success",
     code: 200,
     message: `Contact with ${id} deleted successfully!`,
-    data: {
-      contacts,
-    },
   });
 };
 
